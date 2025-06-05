@@ -1,83 +1,100 @@
-**ToxiFix: Emotionally Intelligent Toxic Comment Classifier
-**
+**ToxiFix: Emotionally Intelligent Toxic Comment Classifier**
 
-ToxiFix is a transformer-based NLP system designed to detect and paraphrase toxic comments in real time. It combines BERT-based classifiers, paraphrasing using LLMs, and reinforcement learning from human feedback (RLHF) to promote safer online spaces.
+ToxiFix is an AI-powered system designed to identify and transform toxic comments in real time. By combining transformer-based classification, paraphrasing through prompt-tuned language models, and reinforcement learning from human feedback (RLHF), ToxiFix aims to foster safer, more inclusive online communication.
 
-🚀 Live Demo: Try it on Hugging Face : https://janviml-toxic-comment-classifier.hf.space/
+🔗 Live Demo: Try it on Hugging Face
 
-🧠 Key Features
-Multilingual Toxic Comment Detection using BERT, RoBERTa, and XLM-RoBERTa
+🔍 Overview
+ToxiFix works in three stages:
 
-Emotionally Aware Paraphrasing with few-shot prompt engineering
+Toxicity Detection – Identifies harmful language across multiple languages.
 
-RLHF-Based Fine-Tuning with empathy, bias, and semantic metrics
+Comment Paraphrasing – Rewrites toxic content using emotionally intelligent language models.
 
-Real-Time Evaluation on toxicity, empathy, and semantic similarity
+RLHF Optimization – Improves rewriting using custom reward functions based on empathy, toxicity reduction, and semantic similarity.
 
-🛠 Tech Stack
-Python 3.8+
+🧠 Features
+Multilingual toxic comment classification (English, Hindi, Hinglish)
 
-Hugging Face Transformers
+Emotionally aware paraphrasing with few-shot prompting
 
-Gradio (Frontend UI)
+Toxicity, bias, and empathy scoring using fine-tuned evaluation models
 
-Sentence-BERT, Emotion-BERT (Evaluation)
+Custom RLHF reward engine to refine outputs
 
-Granite 3.2-2B (Paraphrasing model)
+Real-time inference deployed via Gradio
 
-RLHF custom scoring mechanism
+💻 Tech Stack
+Transformers: BERT, RoBERTa, XLM-RoBERTa
 
-📊 Datasets
+Paraphrasing: Prompt-tuned Granite 3.2-2B
+
+Evaluation Models: Emotion-BERT, Sentence-BERT
+
+Backend: Python, Hugging Face, Gradio
+
+RLHF: Custom reward functions and fine-tuning loop
+
+📊 Model Performance
+Model	Accuracy	F1 Score	AUC
+BERT	92.53%	92.79%	0.9810
+DistilBERT	91.32%	91.39%	0.9553
+XLM-RoBERTa	90.17%	90.23%	0.9638
+
+📁 Datasets Used
 Jigsaw Multilingual Toxic Comment Classification
 
 YouTube Toxic Comments Dataset
 
 Manually scraped multilingual YouTube comments
 
-Human feedback reward dataset for RLHF training
+RLHF reward dataset curated via expert labeling
 
-🧪 Model Performance (Highlights)
-Model	Accuracy	F1 Score	AUC
-BERT	92.53%	92.79%	0.9810
-DistilBERT	91.32%	91.39%	0.9553
-XLM-RoBERTa	90.17%	90.23%	0.9638
+🚀 Getting Started
+Clone the repository:
 
-🧬 Architecture Pipeline
-Stage 1: Detect Toxic Comments using Transformers
+bash
+Copy
+Edit
+git clone https://github.com/your-username/toxifix.git  
+cd toxifix  
+Install dependencies:
 
-Stage 2: Paraphrase Toxic Text via prompt-tuned LLMs
+bash
+Copy
+Edit
+pip install -r requirements.txt  
+Run the app:
 
-Stage 3: Evaluate Rewritten Text (toxicity, bias, empathy)
-
-Stage 4: Refine using Reinforcement Learning from Human Feedback
-
-Stage 5: Deployed on Hugging Face with real-time moderation
-
+bash
+Copy
+Edit
+python app.py  
 📈 Evaluation Metrics
-Toxicity Score
+Toxicity Score – Based on fine-tuned classifier
 
-Bias Detection
+Bias Detection – Flagging potential group-based bias
 
-Semantic Similarity
+Semantic Similarity – Using Sentence-BERT
 
-Empathy Score
+Empathy Score – Based on fine-tuned Emotion-BERT
 
-RLHF-based Reward Optimization
+RLHF Reward Score – Weighted combination for model tuning
 
-👥 Contributors
-Jahnavi Chintakindi – Lead Developer, Classification Pipeline, Evaluation
+👥 Team
+Jahnavi Chintakindi – Toxicity classification, model integration
 
-Poojitha Ganta – Paraphrasing, Prompt Engineering, Metric Design
+Poojitha Ganta – Paraphrasing module, prompt engineering
 
-Ramya Rangaraju – RLHF Implementation, Deployment Architecture
+Ramya Rangaraju – RLHF reward modeling and architecture
 
-📌 Future Enhancements
-Chrome extension and API integrations for platforms like Gmail and YouTube
+🔮 Future Work
+Browser extension integration (YouTube, Gmail, Twitter)
 
-Expanded multilingual support and fairness audits
+Expansion of RLHF dataset with public contributions
 
-Integration of real-time user feedback into RLHF loop
+Real-time toxicity detection and rewriting API
 
-📃 License
-This project is licensed under the MIT License.
+📄 License
+MIT License
 
