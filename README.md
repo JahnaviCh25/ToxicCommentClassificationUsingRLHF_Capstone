@@ -1,4 +1,6 @@
-ToxiFix: Emotionally Intelligent Toxic Comment Classifier
+**ToxiFix: Emotionally Intelligent Toxic Comment Classifier
+**
+
 ToxiFix is a transformer-based NLP system designed to detect and paraphrase toxic comments in real time. It combines BERT-based classifiers, paraphrasing using LLMs, and reinforcement learning from human feedback (RLHF) to promote safer online spaces.
 
 🚀 Live Demo: Try it on Hugging Face : https://janviml-toxic-comment-classifier.hf.space/
