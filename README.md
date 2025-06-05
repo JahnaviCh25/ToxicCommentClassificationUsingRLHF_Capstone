@@ -1,100 +1,78 @@
-**ToxiFix: Emotionally Intelligent Toxic Comment Classifier**
+**ToxiFix: An AI-Powered Multilingual Toxic Comment Classifier and Rewriter** 
 
-ToxiFix is an AI-powered system designed to identify and transform toxic comments in real time. By combining transformer-based classification, paraphrasing through prompt-tuned language models, and reinforcement learning from human feedback (RLHF), ToxiFix aims to foster safer, more inclusive online communication.
+ToxiFix is an advanced NLP system designed to identify and neutralize toxic language across multiple languages. This project leverages transformer-based classification models, prompt-tuned paraphrasing, and reinforcement learning from human feedback (RLHF) to transform harmful content into constructive communication—without compromising intent.
 
-🔗 Live Demo: Try it on Hugging Face
+📍 Live Demo: Launch the App on Hugging Face Spaces : https://janviml-toxic-comment-classifier.hf.space/
 
-🔍 Overview
-ToxiFix works in three stages:
+🧩 Project Summary
+In an era of increasingly polarized digital discourse, detecting and rephrasing toxic comments is not just a technical challenge—but a social necessity.
 
-Toxicity Detection – Identifies harmful language across multiple languages.
+**ToxiFix follows a five-stage pipeline:**
+Detection: Identifies toxic content using state-of-the-art multilingual classifiers.
+Paraphrasing: Rewrites toxic comments through prompt-engineered LLMs.
+Evaluation: Scores outputs for toxicity, bias, empathy, and semantic alignment.
+RLHF Optimization: Trains the model using composite human-centric rewards.
+Deployment: Provides a real-time interface using Gradio and Hugging Face APIs.
 
-Comment Paraphrasing – Rewrites toxic content using emotionally intelligent language models.
+🧠 **Core Features**
+✅ Toxicity detection in English, Hindi, and Hinglish
+✅ Emotionally intelligent rewriting of harmful content
+✅ Custom evaluation metrics using empathy and semantic similarity
+✅ Integrated RLHF feedback loop for fine-tuning outputs
+✅ Secure, lightweight, and interactive web deployment
 
-RLHF Optimization – Improves rewriting using custom reward functions based on empathy, toxicity reduction, and semantic similarity.
-
-🧠 Features
-Multilingual toxic comment classification (English, Hindi, Hinglish)
-
-Emotionally aware paraphrasing with few-shot prompting
-
-Toxicity, bias, and empathy scoring using fine-tuned evaluation models
-
-Custom RLHF reward engine to refine outputs
-
-Real-time inference deployed via Gradio
-
-💻 Tech Stack
-Transformers: BERT, RoBERTa, XLM-RoBERTa
-
-Paraphrasing: Prompt-tuned Granite 3.2-2B
-
-Evaluation Models: Emotion-BERT, Sentence-BERT
-
-Backend: Python, Hugging Face, Gradio
-
-RLHF: Custom reward functions and fine-tuning loop
+**🧪 Technologies Used**
+Model Architectures
+BERT, DistilBERT, XLM-RoBERTa (classification)
+Sentence-BERT, Emotion-BERT (evaluation)
+Granite 3.2-2B (LLM for paraphrasing)
+Frameworks and Libraries
+Hugging Face Transformers
+Gradio
+Python (3.8+)
+PyTorch, NumPy, Pandas
 
 📊 Model Performance
-Model	Accuracy	F1 Score	AUC
-BERT	92.53%	92.79%	0.9810
-DistilBERT	91.32%	91.39%	0.9553
-XLM-RoBERTa	90.17%	90.23%	0.9638
+<img width="518" alt="image" src="https://github.com/user-attachments/assets/33f53ba5-5c3e-46fa-8d66-803f32f04da1" />
+
+Metrics evaluated on multilingual toxic comment datasets with balanced splits.
 
 📁 Datasets Used
-Jigsaw Multilingual Toxic Comment Classification
+Jigsaw Multilingual Toxic Comment Classification (Kaggle)
+YouTube multilingual comment datasets
+Manually annotated human feedback dataset for RLHF scoring
 
-YouTube Toxic Comments Dataset
+**⚙️ Getting Started**
+📍 Live Demo: Launch the App on Hugging Face Spaces : https://janviml-toxic-comment-classifier.hf.space/
 
-Manually scraped multilingual YouTube comments
+**📈 Evaluation Metrics**
+Toxicity Score: Based on transformer classifier predictions
 
-RLHF reward dataset curated via expert labeling
+Empathy Score: Evaluated using fine-tuned Emotion-BERT
 
-🚀 Getting Started
-Clone the repository:
+Bias Check: Flags implicit bias against groups
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/toxifix.git  
-cd toxifix  
-Install dependencies:
+Semantic Similarity: Measures message preservation with Sentence-BERT
 
-bash
-Copy
-Edit
-pip install -r requirements.txt  
-Run the app:
+Reward Function: Custom RLHF metric combining all the above
 
-bash
-Copy
-Edit
-python app.py  
-📈 Evaluation Metrics
-Toxicity Score – Based on fine-tuned classifier
+**👥 Contributors**
 
-Bias Detection – Flagging potential group-based bias
+Jahnavi Chintakindi – Project Lead, Classification Models, Integration
+Poojitha Ganta – Prompt Engineering, Paraphrasing Pipeline
+Ramya Rangaraju – RLHF Logic, Evaluation Metrics, Deployment
 
-Semantic Similarity – Using Sentence-BERT
+**🔮 Future Development**
+🌐 Browser extension for Gmail, YouTube, and Twitter moderation
+🔁 Continuous RLHF training loop via anonymous user feedback
+📊 Public leaderboard with user-submitted toxic comment rewriters
 
-Empathy Score – Based on fine-tuned Emotion-BERT
+**📄 License**
+This project is licensed under the MIT License.
 
-RLHF Reward Score – Weighted combination for model tuning
+**Citation**
+If you use this framework or our methodology in your research, please consider citing:
 
-👥 Team
-Jahnavi Chintakindi – Toxicity classification, model integration
-
-Poojitha Ganta – Paraphrasing module, prompt engineering
-
-Ramya Rangaraju – RLHF reward modeling and architecture
-
-🔮 Future Work
-Browser extension integration (YouTube, Gmail, Twitter)
-
-Expansion of RLHF dataset with public contributions
-
-Real-time toxicity detection and rewriting API
-
-📄 License
-MIT License
+J. Chintakindi, P. Ganta, R. Rangaraju. ToxiFix: A Multilingual Emotion-Aware Toxic Comment Classification and Rewriting Framework, 2024.
+https://github.com/JahnaviCh25/ToxicCommentClassificationUsingRLHF_Capstone
 
